@@ -2,17 +2,17 @@
 <vtu>
 	<student>
 		<id>101</id>
-		<name>Sudeep</name>
+		<name></name>
 		<college>Nitte</college>
 	</student>
 	<student>
 		<id>102</id>
-		<name>Gulshan</name>
+		<name></name>
 		<college>Nitte</college>
 	</student>
 	<student>
 		<id>103</id>
-		<name>Harsh</name>
+		<name></name>
 		<college>Nitte</college>
 	</student>
 </vtu>
