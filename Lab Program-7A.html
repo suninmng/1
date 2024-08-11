@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Personal Info</title>
+</head>
+<body bgcolor="lightpink">
+    <form method="post" action="http://localhost/weblabmca/phpfile.php">
+        <table border="10" bgcolor="lightgreen" align="center">
+            <caption><h1>Input Personal Data</h1></caption>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="txtname"/></td>
+            </tr>
+            <tr>
+                <td>Address1</td>
+                <td><input type="text" name="txtaddr1"/></td>
+            </tr>
+            <tr>
+                <td>Address2</td>
+                <td><input type="text" name="txtaddr2"/></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="txtemail"/></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit" name="submit1"/>
+                    <input type="reset"/>
+                </td>
+            </tr>
+        </table>
+
+    <h1 align="center">Search</h1>
+    <table border="2" bgcolor="lightblue" align="center">
+        <tr>
+            <td>Enter name to search</td>
+            <td><input type="text" name="searchname"/></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Search" name="submit2"/>
+                <input type="reset"/>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Square Series</title>
+</head>
+<body>
+	<h1><center><b>To Generate TABLE of 1 to N number And Their Squres</b></center></h1>
+	
+	<script>
+		var i,j,k,n,pro,str;
+		n=prompt("Enter the Range",0);
+		
+		for(k=1;k<=n;k++)
+		{
+			str="";
+			for(i=1;i<=10;i++)
+			{
+				pro=k*i;
+				j=Math.pow(pro,2)
+				str+= k+"*"+i+"="+pro+"---"+j+"\n";
+			}
+			alert(str);
+		}
+	</script>
+	
+</body>
+</html>

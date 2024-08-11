@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/css" href="lab6a.css" ?>
+
+<vtu>
+	<student>
+		<usn>1NT23MC105</usn>
+		<name>V Adithya</name>
+		<branch>MCA</branch>
+		<college>Nitte Meenakshi</college>
+		<yearofjoin>2023</yearofjoin>
+		<email>adithya@gmail.com</email>
+	</student>
+	<student>
+		<usn>1NT23MC096</usn>
+		<name>Sudeep</name>
+		<branch>MCA</branch>
+		<college>Nitte Meenakshi</college>
+		<yearofjoin>2023</yearofjoin>
+		<email>sudeep@gmail.com</email>
+	</student>
+	<student>
+		<usn>1NT23MC061</usn>
+		<name>Prathik</name>
+		<branch>MCA</branch>
+		<college>Nitte Meenakshi</college>
+		<yearofjoin>2023</yearofjoin>
+		<email>prathika@gmail.com</email>
+	</student>
+</vtu>

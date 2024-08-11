@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Numbers Analysis</title>
+    <script>
+        function generateRandomNumbers(n) 
+		{
+            var randomNumbers = [];
+            for (var i = 0; i < n; i++) 
+			{
+                randomNumbers.push(Math.random());
+            }
+            return randomNumbers;
+        }
+        
+        function calculateMean(numbers) 
+		{
+            if (numbers.length == 0) return 0;
+            
+            var sum = 0;
+            for (var i = 0; i < numbers.length; i++) 
+			{
+                sum += numbers[i];
+            }
+            return sum / numbers.length;
+        }
+        
+        function calculateMedian(numbers) 
+		{
+            if (numbers.length == 0) return 0;
+            
+            numbers.sort(function(a, b) 
+			{
+                return a - b;
+            });
+            
+            var middle = Math.floor(numbers.length / 2);
+            if (numbers.length % 2 === 0) 
+			{
+                return (numbers[middle - 1] + numbers[middle]) / 2;
+            } 
+			else 
+			{
+                return numbers[middle];
+            }
+        }
+        
+        function analyzeRandomNumbers() 
+		{
+            var n = prompt("Enter the number of random numbers to generate: ");
+            n = parseInt(n); 
+            
+            if (isNaN(n) || n <= 0) 
+			{
+                alert("Please enter a valid positive number");
+                return;
+            }
+            
+            var randomNumbers = generateRandomNumbers(n);
+            var mean = calculateMean(randomNumbers);
+            var median = calculateMedian(randomNumbers);
+            
+            document.write('<h2>Random Numbers Analysis</h2>');
+            document.write('<p>Generated ' + n + ' random numbers: ' + randomNumbers.join(', ') + '</p>');
+            document.write('<p>Mean (average) of the numbers: ' + mean + '</p>');
+            document.write('<p>Median of the numbers: ' + median + '</p>');
+        }
+    </script>
+</head>
+<body>
+    <button onclick="analyzeRandomNumbers()">Analyze Random Numbers</button>
+</body>
+</html>

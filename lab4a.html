@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD xHTML 1.1//EN" 
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head><title>USN Validation</title>
+<script type="text/javascript">
+function checkusn()
+{
+    var str=document.getElementById('usn').value;
+    var usno=/^[1-4]{1}[A-Z]{2}\d{2}[A-Z]{2}\d{3}$/;
+    var rest=str.match(usno);
+
+    if(rest==null)
+        alert("Invalid USN\n");
+    else
+        alert("Valid USN");
+}
+</script>
+</head>
+
+<body>
+    <h2 align='center' style='color:red'>Validate USN</h2>
+    <hr /> <br /> <br />
+
+    <form id="myform">
+        <label><h2>Enter USN:</h2>
+        <input type="text" id="usn" size="20" /> </label>
+        <input type="button" onclick="checkusn()" value="Validate" />
+    </form>
+</body>
+</html>

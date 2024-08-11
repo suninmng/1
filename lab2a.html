@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fibonacci Series</title>
+</head>
+<body>
+<h1>Fibonacci Series</h1>
+<script>
+	var n,a,b,c,i;
+	n=prompt("Enter the range",0);
+	a=0;
+	b=1;
+	
+	for(i=1;i<=n;i++)
+	{
+		document.write(a+ "<br>");
+		c=a+b;
+		a=b;
+		b=c;
+	}
+</script>
+</body>
+</html>

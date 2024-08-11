@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Usn Validation</title>
+    <script>
+        function checkusn() 
+		{
+            var str = document.getElementById('usn').value;
+            var usno = /^[1-4]{1}[A-Z]{2}\d{2}[A-Z]{2}\d{3}$/;
+            var rest = str.match(usno);
+            if (rest == null) 
+			{
+                alert("Not Valid USN\n");
+            } 
+			else 
+			{
+                alert("Valid USN ");
+            }
+            validsem();
+        }
+
+        function validsem() 
+		{
+            var sem = document.getElementById('sem').value;
+            var s1 = /^[1-6]$/;
+            var res = sem.match(s1);
+            if (res == null) 
+			{
+                alert("Not Valid semester");
+            } 
+			else 
+			{
+                alert("Valid Semester");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 align='center' style='color:red'>Validate USN and Semester</h2>
+    <hr /><br /><br />
+    <form id="myform">
+        <label><b>USN Number:</b>
+        <input type="text" id="usn" size="12" /> </label>
+        <label><b>Semester:</b>
+        <input type="text" id="sem" size="5" /> </label>
+        <input type="button" value="Validate" onclick="checkusn()" />
+    </form>
+</body>
+</html>

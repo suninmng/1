@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Student Registration Form</title>
+	<style>
+		.form-container
+		{
+			max-width:600px;
+			margin:20px auto;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 0 5px;
+		}
+		h2.form-heading 
+		{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="form-container">
+		<h2 class="form-heading">Student Registration Form</h2>
+		<form action="" id="studentForm">
+			<table style="width:100%">
+				<tr>
+					<td><label>First Name</label></td>
+					<td><input type="text" name="firstName" required></td>
+				</tr>
+				<tr>
+					<td><label>Last Name:</label></td>
+					<td><input type="text" name="lastName" required></td>
+				</tr>
+				<tr>
+					<td><label>Roll No:</label></td>
+					<td><input type="text" name="rollNo" required></td>
+				</tr>
+				<tr>
+					<td><label>E-mail Id:</label></td>
+					<td><input type="email" name="email" required></td>
+				</tr>
+				<tr>
+					<td><label>Mobile Number:</label></td>
+					<td><input type="tel" name="mobile" required></td>
+				</tr>
+				<tr>
+					<td><label>Gender:</label></td>
+					<td>
+						<select name="gender" required>
+							<option>Select</option>
+							<option>Male</option>
+							<option>Female</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Date of Birth:</label></td>
+					<td><input type="date" name="dob" required></td>
+				</tr>
+				<tr>
+					<td><label>Address:</label></td>
+					<td><textarea name="address" rows="4"></textarea></td>
+				</tr> 
+			</table>
+			<div align="center">
+				<input type="submit" value="submit">
+				<input type="reset" value="Reset">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
