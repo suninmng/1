@@ -3,27 +3,27 @@
 
 <vtu>
 	<student>
-		<usn>1NT23MC105</usn>
-		<name>V Adithya</name>
+		<usn></usn>
+		<name></name>
 		<branch>MCA</branch>
 		<college>Nitte Meenakshi</college>
 		<yearofjoin>2023</yearofjoin>
-		<email>adithya@gmail.com</email>
+		<email>@gmail.com</email>
 	</student>
 	<student>
-		<usn>1NT23MC096</usn>
-		<name>Sudeep</name>
+		<usn></usn>
+		<name></name>
 		<branch>MCA</branch>
 		<college>Nitte Meenakshi</college>
 		<yearofjoin>2023</yearofjoin>
-		<email>sudeep@gmail.com</email>
+		<email>@gmail.com</email>
 	</student>
 	<student>
-		<usn>1NT23MC061</usn>
-		<name>Prathik</name>
+		<usn></usn>
+		<name></name>
 		<branch>MCA</branch>
 		<college>Nitte Meenakshi</college>
 		<yearofjoin>2023</yearofjoin>
-		<email>prathika@gmail.com</email>
+		<email>@gmail.com</email>
 	</student>
 </vtu>
