@@ -1,0 +1,84 @@
+App.js:
+
+import React, {useState} from 'react';
+import StudentForm from './Component/StudentForm';
+import StudentList from './Component/StudentList';
+
+const App=()=>{
+  const [students,setStudents]=useState([]);
+  const addStudent=(student)=>setStudents([...students,student]);
+
+  return(
+    <div>
+      <h1>Student Registartion Portal</h1>
+      <StudentForm addStudent={addStudent} />
+      <StudentList students={students} />
+    </div>
+  );
+};
+
+export default App;
+
+StudentForm.js :
+
+import React, {useState} from 'react';
+const StudentForm=({addStudent})=>{
+    const [formData, setFormData] = useState({ name: '', email: '', course: '' });
+
+                                                                             
+    const handleChange = (e) => {
+        setFormData({
+          ...formData,
+          [e.target.name]: e.target.value,
+        });
+      };
+      
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (Object.values(formData).every(val => val)) {
+            addStudent(formData);
+            setFormData({ name: '', email: '', course: '' });
+        }
+    };
+    return (
+        <form onSubmit={handleSubmit}>
+            {['name','email','course'].map((field)=>(
+                <div key={field}>
+                    <label>{field.charAt(0).toUpperCase()+field.slice(1)};</label>
+                    <input type={field==='email'?'email':'text'} 
+                    name={field}
+                    value={formData[field]}
+                    onChange={handleChange}/>
+                </div>
+            ))}
+            <button type="submit">Register</button>
+        </form>
+    );
+};
+
+export default StudentForm;
+
+StudentList.js :
+
+import React from 'react';
+
+const StudentList = ({ students }) => (
+    <div>
+        <h2>Registered Students</h2>
+        {students.length ? (
+            students.map((student, index) => (
+                <div key={index}>
+                    <h3>{student.name}</h3>
+                    <p>Email: {student.email}</p>
+                    <p>Course: {student.course}</p>
+                </div>
+            ))
+        ) : (
+            <p>No Students Registered yet.</p>
+        )}
+    </div>
+);
+
+export default StudentList;
